@@ -1,5 +1,5 @@
 const getNeighborhoodsList = function () {
-  this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
+  this.sanFranciscoNeighborhoods = ["SOMA", "Union Square"];
 
   this.addNeighborhood = (newNeighborhood) => {
     this.sanFranciscoNeighborhoods.push(newNeighborhood);
@@ -8,4 +8,3 @@ const getNeighborhoodsList = function () {
 };
 
 export default getNeighborhoodsList;
-
