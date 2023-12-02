@@ -1,3 +1,2 @@
 # Create a file named .gitignore in the root of your project and add the following lines:
 node_modules/
-.nvmrc
