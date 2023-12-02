@@ -6,7 +6,7 @@ async function handleProfileSignup(firstName, lastName, fileName) {
 
   return result.map((promiseResult) => ({
     status: promiseResult.status,
-    value: promiseResult.status === 'fulfilled' ? promiseResult.value : promiseResult.reason,
+    value: promiseResult.status === 'fulfilled' ? promiseResult.value : String(promiseResult.reason),
   }));
 }
 
