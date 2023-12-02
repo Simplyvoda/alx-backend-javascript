@@ -32,13 +32,15 @@ Conditional properties refer to the ability to conditionally add properties to a
 
 Method properties use a shorthand syntax to define functions as object properties without using the `function` keyword. Here's an example:
 
-`const myObject = {
+```
+const myObject = {
   // ES6 method property syntax
   myMethod() {
     // Method logic here
     console.log('This is a method using ES6 syntax.');
   }
-};`
+};
+```
 
 ### 8\. Iterables and Iterators
 
@@ -47,7 +49,8 @@ Method properties use a shorthand syntax to define functions as object propertie
 
 Example of using iterators with a custom iterable object:
 
-`const iterableObject = {
+```
+const iterableObject = {
   [Symbol.iterator]() {
     let index = 0;
     const data = [1, 2, 3, 4];
@@ -62,4 +65,5 @@ Example of using iterators with a custom iterable object:
 };
 for (const item of iterableObject) {
   console.log(item); // Outputs: 1, 2, 3, 4
-}`
+}
+```
