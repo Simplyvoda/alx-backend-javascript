@@ -1,5 +1,5 @@
-ES6 Basics Concepts
--------------------
+ES6 Basics Concepts 😄
+----------------------
 
 ### 1\. ES6 Syntax
 
@@ -51,7 +51,6 @@ Example of using iterators with a custom iterable object:
   [Symbol.iterator]() {
     let index = 0;
     const data = [1, 2, 3, 4];
-
     return {
       next() {
         return index < data.length ?
@@ -61,7 +60,6 @@ Example of using iterators with a custom iterable object:
     };
   }
 };
-
 for (const item of iterableObject) {
   console.log(item); // Outputs: 1, 2, 3, 4
 }`
