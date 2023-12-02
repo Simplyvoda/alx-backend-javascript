@@ -1,7 +1,8 @@
-import { uploadPhoto, createUser } from './utils';
+import { uploadPhoto } from './utils';
+import { createUser } from './utils';
 
-function handleProfileSignup() {
-  Promise.all([createUser(), uploadPhoto()])
+async function handleProfileSignup() {
+  return Promise.all([createUser(), uploadPhoto()])
     .then((res) => {
       const [user, photo] = res;
       const newObj = {
