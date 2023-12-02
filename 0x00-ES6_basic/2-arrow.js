@@ -1,9 +1,14 @@
-const getNeighborhoodsList = function () {
-  this.sanFranciscoNeighborhoods = ["SOMA", "Union Square"];
+const getNeighborhoodsList = () => {
+  const sanFranciscoNeighborhoods = ["SOMA", "Union Square"];
 
-  this.addNeighborhood = (newNeighborhood) => {
-    this.sanFranciscoNeighborhoods.push(newNeighborhood);
-    return this.sanFranciscoNeighborhoods;
+  const addNeighborhood = (newNeighborhood) => {
+    sanFranciscoNeighborhoods.push(newNeighborhood);
+    return sanFranciscoNeighborhoods;
+  };
+
+  return {
+    sanFranciscoNeighborhoods,
+    addNeighborhood,
   };
 };
 
