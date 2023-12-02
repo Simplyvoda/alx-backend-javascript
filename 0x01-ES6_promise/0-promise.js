@@ -4,10 +4,10 @@ function getResponseFromAPI() {
       const success = true;
 
       if (success) {
-        const data = { message: "This is the response" };
+        const data = { message: 'This is the response' };
         resolve(data);
       } else {
-        reject(new Error("Failed to fetch data"));
+        reject(new Error('Failed to fetch data'));
       }
     }, 2000);
   });
