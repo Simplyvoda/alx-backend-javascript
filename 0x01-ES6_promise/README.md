@@ -1,4 +1,4 @@
-ES6 Promises :smiley
+ES6 Promises :😃
 ============
 
 This repository contains examples and explanations of ES6 Promises and their various methods, aimed at understanding asynchronous JavaScript operations using Promises.
@@ -110,7 +110,7 @@ resolvedPromise
   .then((value) => {
     console.log(value); // Output: Resolved value
   });
-``
+```
 
 `Promise.resolve` is useful for creating a Promise that is already resolved with a specific value.
 
