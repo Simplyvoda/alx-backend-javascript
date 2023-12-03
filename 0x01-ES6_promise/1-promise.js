@@ -3,11 +3,11 @@ function getFullResponseFromAPI(success) {
     if (success === true) {
       const data = {
         status: 200,
-        body: 'Success',
+        body: "Success",
       };
       resolve(data);
     } else if (success === false) {
-      reject(new Error('The fake API is not working currently'));
+      reject(new Error("The fake API is not working currently"));
     }
   }, 5000);
 }

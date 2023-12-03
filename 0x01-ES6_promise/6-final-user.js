@@ -1,5 +1,5 @@
-import signUpUser from './4-user-promise';
-import uploadPhoto from './5-photo-reject';
+import signUpUser from "./4-user-promise";
+import uploadPhoto from "./5-photo-reject";
 
 async function handleProfileSignup(firstName, lastName, fileName) {
   const result = await Promise.allSettled([
@@ -10,7 +10,7 @@ async function handleProfileSignup(firstName, lastName, fileName) {
   return result.map((promiseResult) => ({
     status: promiseResult.status,
     value:
-      promiseResult.status === 'fulfilled'
+      promiseResult.status === "fulfilled"
         ? promiseResult.value
         : String(promiseResult.reason),
   }));
