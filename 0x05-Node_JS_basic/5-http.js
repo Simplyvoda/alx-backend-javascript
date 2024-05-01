@@ -44,8 +44,7 @@ const countStudents = (path) => {
 
 app.on('request', (req, res) => {
 	if (req.url === '/') {
-		  const responseText = 'Hello Holberton School!';
-		
+		const responseText = 'Hello Holberton School!';
 		res.setHeader('Content-Type', 'text/plain');
 		res.setHeader('Content-Length', responseText.length);
 		res.statusCode = 200;
