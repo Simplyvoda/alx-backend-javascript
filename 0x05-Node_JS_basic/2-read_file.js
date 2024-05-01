@@ -9,7 +9,7 @@ const countStudents = (path) => {
   if (!fs.existsSync(path)) {
     throw new Error('Cannot load the database');
   }
-  if (!fs.statSync(data).isFile()) {
+  if (!fs.statSync(path).isFile()) {
     throw new Error('Cannot load the database');
   }
   
