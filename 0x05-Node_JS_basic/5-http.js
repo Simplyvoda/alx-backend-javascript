@@ -68,9 +68,8 @@ app.on('request', (req, res) => {
           		res.setHeader('Content-Type', 'text/plain');
 			res.setHeader('Content-Length', responseText.length);
           		res.statusCode = 200;
-          		res.write(Buffer.from(responseText)););
-	}else{
-		res.statusCode = 400;
+          		res.write(Buffer.from(responseText));
+		});
 	}
 });
 
