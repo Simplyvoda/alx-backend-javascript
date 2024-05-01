@@ -30,9 +30,8 @@ class StudentsController {
         for (const [field, group] of Object.entries(studentGroups).sort(cmpFxn)) {
           responseParts.push([
             `Number of students in ${field}: ${group.length}.`,
-            'List:',
-            group.map((student) => student.firstname).join(', '),
-          ].join(' '));
+            `List: ${group}`,
+          ];
         }
         response.status(200).send(responseParts.join('\n'));
       })
