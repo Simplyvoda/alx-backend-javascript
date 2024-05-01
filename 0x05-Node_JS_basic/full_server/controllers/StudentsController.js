@@ -28,9 +28,10 @@ class StudentsController {
         };
 
         for (const [field, group] of Object.entries(studentGroups).sort(cmpFxn)) {
+          console.log(field, group);
           responseParts.push([
-            `Number of students in ${field}: ${group.length}.`,
-            `List: ${group}`,
+            `Number of students in ${field}: ${group.length}. 
+             List: ${group.map((each) => each)}`,
           ];
         }
         response.status(200).send(responseParts.join('\n'));
