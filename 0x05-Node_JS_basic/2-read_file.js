@@ -17,7 +17,7 @@ const countStudents = (path) => {
     // reading file synchronously
     const data = fs.readFileSync(path, 'utf-8')
     const lines = data.trim().split('\n');
-    console.log(`Number of students: ${lines.length -1}\n`)
+    console.log(`Number of students: ${lines.length -1}`)
     const obj = {}
     lines.map((line, index) => {
       if (index!==0){
@@ -34,7 +34,7 @@ const countStudents = (path) => {
     })
     for (const [key, value] of Object.entries(obj)){
       const studentList = value.join(', ');
-      console.log(`Number of students in ${key}: ${value.length}. List: ${studentList}\n`)
+      console.log(`Number of students in ${key}: ${value.length}. List: ${studentList}`)
     }
   }catch(err){
     throw new Error('Cannot load the database');
