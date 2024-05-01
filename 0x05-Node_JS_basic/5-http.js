@@ -8,6 +8,8 @@ const http = require('http');
 
 const app = http.createServer();
 
+const FILE = process.argv.length > 2 ? process.argv[2] : '';
+
 const fs = require('fs');
 
 const countStudents = (path) => {
@@ -51,7 +53,7 @@ app.on('request', (req, res) => {
 		res.write(Buffer.from(responseText));
 	}else if (req.url === '/students') {
 		const responseParts = ['This is the list of our students'];
-		countStudents(process.argv[2])
+		countStudents(FILE)
 		.then((report) => {
 			responseParts.push(report);
 			const responseText = responseParts.join('\n');
@@ -62,9 +64,9 @@ app.on('request', (req, res) => {
 		})
 		.catch((err) => {
 		        responseParts.push(err instanceof Error ? err.message : err.toString());
-          		const responseText = responseParts.join('\n');
+			const responseText = responseParts.join('\n');
           		res.setHeader('Content-Type', 'text/plain');
-          		res.setHeader('Content-Length', responseText.length);
+			res.setHeader('Content-Length', responseText.length);
           		res.statusCode = 200;
           		res.write(Buffer.from(responseText)););
 	}else{
