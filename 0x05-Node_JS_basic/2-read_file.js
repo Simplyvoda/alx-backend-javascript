@@ -22,8 +22,8 @@ const countStudents = (path) => {
     lines.map((line, index) => {
       if (index !== 0) {
         const seperated = line.split(',');
-        firstName = seperated[0];
-        field = seperated[seperated.length - 1].trim();
+        const firstName = seperated[0];
+        const field = seperated[seperated.length - 1].trim();
         if (!obj[field]) {
           obj[field] = [];
         }

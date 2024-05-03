@@ -60,12 +60,12 @@ app.on('request', (req, res) => {
         res.write(Buffer.from(responseText));
       })
       .catch((err) => {
-		        responseParts.push(err instanceof Error ? err.message : err.toString());
+        responseParts.push(err instanceof Error ? err.message : err.toString());
         const responseText = responseParts.join('\n');
-          		res.setHeader('Content-Type', 'text/plain');
+        res.setHeader('Content-Type', 'text/plain');
         res.setHeader('Content-Length', responseText.length);
-          		res.statusCode = 200;
-          		res.write(Buffer.from(responseText));
+        res.statusCode = 200;
+        res.write(Buffer.from(responseText));
       });
   }
 });
