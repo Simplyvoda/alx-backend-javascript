@@ -12,33 +12,32 @@ const countStudents = (path) => {
   if (!fs.statSync(path).isFile()) {
     throw new Error('Cannot load the database');
   }
-  
-  try{
+
+  try {
     // reading file synchronously
-    const data = fs.readFileSync(path, 'utf-8')
+    const data = fs.readFileSync(path, 'utf-8');
     const lines = data.trim().split('\n');
-    console.log(`Number of students: ${lines.length -1}`)
-    const obj = {}
+    console.log(`Number of students: ${lines.length - 1}`);
+    const obj = {};
     lines.map((line, index) => {
-      if (index!==0){
-        const seperated = line.split(",")
-        firstName = seperated[0]
-        field = seperated[seperated.length-1].trim()
-        if (!obj[field]){
-          obj[field] = []
+      if (index !== 0) {
+        const seperated = line.split(',');
+        firstName = seperated[0];
+        field = seperated[seperated.length - 1].trim();
+        if (!obj[field]) {
+          obj[field] = [];
         }
-        obj[field].push(firstName)
-  
+        obj[field].push(firstName);
       }
-      return obj
-    })
-    for (const [key, value] of Object.entries(obj)){
+      return obj;
+    });
+    for (const [key, value] of Object.entries(obj)) {
       const studentList = value.join(', ');
-      console.log(`Number of students in ${key}: ${value.length}. List: ${studentList}`)
+      console.log(`Number of students in ${key}: ${value.length}. List: ${studentList}`);
     }
-  }catch(err){
+  } catch (err) {
     throw new Error('Cannot load the database');
   }
-}
+};
 
 module.exports = countStudents;
